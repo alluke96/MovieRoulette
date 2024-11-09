@@ -3,8 +3,10 @@ import 'package:movie_roulette/view/pages/genre_page.dart';
 import 'package:movie_roulette/view/pages/movies_page.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
@@ -18,19 +20,21 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Roleta de Filmes'),
+        title: const Text('Roleta de Filmes'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ElevatedButton(
-            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MovieListPage())),
-            child: Text('Filmes'),
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const MovieListPage())),
+            child: const Text('Filmes'),
           ),
-          SizedBox(height: 20),
+
+          const SizedBox(height: 20),
+          
           ElevatedButton(
-            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => GenrePage())),
-            child: Text('Gêneros de Filmes'),
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => GenreListPage())),
+            child: const Text('Gêneros'),
           ),
         ],
       ),

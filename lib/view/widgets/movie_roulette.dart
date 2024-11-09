@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_roulette/blocs/movies/movies_bloc.dart';
+import 'package:movie_roulette/blocs/movies/movie_bloc.dart';
 
 class MovieRoulette extends StatelessWidget {
   final MovieBloc bloc;
