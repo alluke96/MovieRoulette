@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_roulette/view/pages/genre_page.dart';
 import 'package:movie_roulette/view/pages/movies_page.dart';
+import 'package:movie_roulette/view/pages/roulette_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -35,6 +36,13 @@ class _HomePageState extends State<HomePage> {
           ElevatedButton(
             onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => GenreListPage())),
             child: const Text('Gêneros'),
+          ),
+
+          const SizedBox(height: 20),
+
+          ElevatedButton(
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => RoulettePage())),
+            child: const Text('Roleta de Filmes'),
           ),
         ],
       ),
